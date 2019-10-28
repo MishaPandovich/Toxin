@@ -1,0 +1,30 @@
+section.form-elements
+	h1.title.form-elements__title Form Elements
+	div.form-elements__wrapper
+		form.form-feedback(action="#" method="post")
+			div.wrapper-input
+				input.input(type="text" name="userName" placeholder="Your Name")
+			div.wrapper-input
+				input.input.input--email(type="text" name="userEmail" placeholder="Your Email")
+			textarea.message(name="message" placeholder="Your Message")
+			input.submit(type="submit" value="Submit")
+
+		div.toggle__wrapper
+			section.toggles
+				h1.title.toggles__title Toggles
+				div.toggle-button-cover
+					div.button-cover
+						div.button.r(id="button-1")
+							input.checkbox(type="checkbox")
+							div.knobs
+							div.layer
+
+			section.tick-boxes
+				h1.title.tick-boxes__title Tick boxes
+				div.checkbox-wrapper
+					div
+						input.input-boxes(type="checkbox" name="check" id="check" value="check")
+						label.label-boxes(for="check")
+					div
+						input.input-boxes(type="checkbox" name="check" id="check-1" value="check-1")
+						label.label-boxes(for="check-1")

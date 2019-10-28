@@ -1,0 +1,19 @@
+$margin: 100px;
+
+hr {
+	margin: $margin;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+@font-face {
+  font-family: 'in';
+  src:url('../fonts/Lato-Black.eot');
+}
+
+.pie-wrapper__title {
+  display: block;
+  margin-bottom: 5%;
+  font-family: 'in', sans-serif;
+  border: 1px solid red;
+}

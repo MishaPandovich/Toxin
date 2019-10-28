@@ -1,0 +1,21 @@
+section.search.drop-down
+	h1.title.search__title search/drop down
+	div.search__wrap
+		input.search__input(type="search" placeholder="Search")
+		button.search__button
+			img.seach__icon(src="../images/search-icon.png")
+	
+	div.search__wrap
+		input.search__input.search__input--error(type="search" placeholder="I've not found what i'm looking for....")
+		button.search__button
+			img.seach__icon(src="../images/search-icon.png")
+
+	div.drop-down__wrap
+		input.drop-down__select(type="text" placeholder="Choose an option")
+		button.drop-down__button
+			img.drop-down__icon(src="../images/select-icon.png")
+		div.options.hidden
+			span.options__item This is option 1
+			span.options__item This is option 2
+			span.options__item This is option 3
+			span.options__item This is option 4
