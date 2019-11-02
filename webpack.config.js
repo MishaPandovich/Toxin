@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const path = require('path')
 const HTMLPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -19,21 +20,12 @@ module.exports = {
       new OptimizeCSSAssetsPlugin({})
     ],
   },
-  plugins: [
-    new HTMLPlugin({
-      filename: "index.html",
-      template: './src/page/index.pug'
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'style.css'
-    })
-  ],
   module: {
     rules: [
-      {
+/*      {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      },
+      },*/
       { 
         test: /\.js$/i, exclude: /node_modules/, loader: "babel-loader" 
       },
@@ -96,5 +88,18 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new HTMLPlugin({
+      filename: "index.html",
+      template: './src/page/index.pug'
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
+  ]
 }

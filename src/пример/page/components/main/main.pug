@@ -1,0 +1,17 @@
+main.main
+  div.block-search-room
+    h2.block-search-room__title Найдем номера под <br> ваши желания
+    //- label(for="datepicker") Прибытие
+    //- input.datapicker-here(id="datepicker")
+    //- label(for="departure") Выезд
+    //- input.departure(id="departure")
+    //- label(for="select-visitors") Гости
+    //- input.select-visitors(id="select-visitors")
+    div.datepicker__inner
+      label.datepicker__label.datepicker__label--here(for="datepicker") Прибытие
+        input.datepicker-here(id="datepicker" placeholder="ДД.ММ.ГГГГ" readonly)
+      label.datepicker__label(for="departure") Выезд
+        input.departure(id="departure" placeholder="ДД.ММ.ГГГГ")
+      label.datepicker__label.datepicker__label--visitors(for="select-visitors") Гости
+        input.select-visitors(id="select-visitors" placeholder="Сколько гостей" readonly)
+      button.datepicker__button Подобрать номер

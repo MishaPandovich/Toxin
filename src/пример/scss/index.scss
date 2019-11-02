@@ -1,4 +1,4 @@
-/*@font-face {
+@font-face {
   font-family: 'in';
   src:url('../fonts/Lato-Black.eot');
 }
@@ -8,10 +8,10 @@
   margin-bottom: 5%;
   font-family: 'in', sans-serif;
   border: 1px solid red;
-}*/
+}
 
-/*@import 'components/normalize.scss';
+@import 'components/normalize.scss';
 @import 'components/header/header.scss';
 @import 'components/main/main.scss';
 @import '../plugins/air-datapicker/css/datepicker.scss';
-@import 'components/main/search-room.scss';*/
+@import 'components/main/search-room.scss';
