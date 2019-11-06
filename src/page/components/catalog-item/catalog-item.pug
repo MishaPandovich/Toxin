@@ -1,0 +1,55 @@
+main.catalog-item
+  div.catalog-item__wrapper-img
+    img.catalog-item__img.catalog-item__img--big(src="#" alt="#")
+    div.catalog-item__inner-img-small
+      img.catalog-item__img.catalog-item__img--small(src="#" alt="#")
+  div.columns
+    div.columns__left
+      section.info-about-room
+        h2.info-about-room__title Сведения о номере
+        ul.info-about-room__list
+          li.info-about-room__item.info-about-room__item--comfort
+            h2.info-about-room__item-title Комфорт
+            p.info-about-room__item__text Шумопоглащающие стены
+          li.info-about-room__item.info-about-room__item--conveniences
+            h2.info-about-room__item-title Удобство
+            p.info-about-room__item__text Окно в каждой из спален
+          li.info-about-room__item.info-about-room__item--cosiness
+            h2.info-about-room__item-title Уют
+            p.info-about-room__item__text Номер оснащен камином
+      section.pie
+      section.comments
+        ul.comments__list
+          li.comments__item
+            div.comments__user
+              img.comments__userpic(src="#")
+              span.comments__username Мурад Сарафанов
+              span.comments__time-writing 5 дней назад
+            div.comments__content
+              span.comments__content-like 12
+              span.comments__content-text Великолепный матрас
+      section.rules-room
+        h2.rules-room__title Правила
+        ul.rules-room__list
+          li.rules-room__item Нельзя с питомцами
+          li.rules-room__item Без вечеринок и мероприятий
+          li.rules-room__item Время прибытия - после 13:00, а выезд до 12:00
+      section.cancel-room
+        h2.cancel-room__title Отмена
+        p.cancel-room__text Бесплатная отмена в течении 48 ч.
+    div.columns__right
+      section.order
+        span.order__number-room №888 <span>Люкс</span>
+        span.order__price 9990 <span class="valute">P</span><span>В сутки</span>
+        div.order__datepicker
+          label.order__datepicker-label(for="datepicker") Прибытие 
+          input.order__datepicker-input.datepicker-here(id="datepicker" placeholder="ДД.ММ.ГГГГ" readonly)
+          label.order__datepicker-label(for="go") Выезд
+          input.order__datepicker-input.order__datepicker-input--go(id="go" placeholder="ДД.ММ.ГГГГ" readonly)
+          
+          label.order-count-visitors__label(for="count-visitors")
+          input.order-count-visitors__input(id="count-visitors" placeholder="3x")
+          div.order-count-visitors
+            div.order-count-visitors__inner
+            span.order-count-visitors__clear Очистить
+            span.order-count-visitors__close Выполнить

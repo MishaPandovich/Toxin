@@ -1,0 +1,38 @@
+main.page-login
+  section.model.model-login
+
+  //- шаблон блока регистрации
+  template(id="model-registration")
+    div.model-registration__inner
+      h2.model-registration__title Регистрация аккаунта
+      form.form-registration(action="#" method="post")
+        input.form-registration__input(type="text" name="name" id="name" placeholder="Имя")
+        input.form-registration__input(type="text" name="surname" id="surname" placeholder="Фамилия")
+        div.form-registration__checkbox
+          input.form-registration__gender.form-registration__gender--man(type="checkbox" name="man" id="man")
+          label.form-registration__label(for="man") Мужчина
+          input.form-registration__gender.form-registration__gender--woman(type="checkbox" name="woman" id="woman")
+          label.form-registration__label(for="woman") Женщина
+        label.form-registration__label(for="birthday") Дата рождения
+        input.form-registration__input(type="text" id="birthday" placeholde="ДД.ММ.ГГГГ")
+        div.data-login.form-registration__data-login Данные для входа в сервис
+          input.form-registration__input(type="text" id="email" placeholde="email")
+          input.form-registration__input(type="text" id="password" placeholde="password")
+        input.form-registration__special-offer(type="checkbox" name="special-offer" id="special-offer")
+        label.form-registration__label(for="special-offer") Получать спецпредложения
+        button.pay.form-registration__pay Перейти к оплате
+        div.block-login
+          p.block-login__text Уже есть аккаунт на Toxin
+          button.block-login__button Войти
+  
+  //- шаблон блока авторизации
+  template(id="model-login")
+    div.model-login__inner
+      h2.model-login__title Войти
+      form.form-login(action="#" method="#")
+        input.form-login__input(type="text" id="email" placeholder="Email")
+        input.form-login__input(type="text" id="password" placeholder="Пароль")
+        button.form-login__button Войти
+        div.block-registration
+          p.block-registration__text Нет аккаунта на Toxin?
+          button.block-registration__button Создать

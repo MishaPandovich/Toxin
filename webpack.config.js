@@ -94,6 +94,18 @@ module.exports = {
       filename: "index.html",
       template: './src/page/index.pug'
     }),
+    new HTMLPlugin({
+      filename: "catalog.html",
+      template: './src/page/catalog.pug'
+    }),
+    new HTMLPlugin({
+      filename: "registration.html",
+      template: './src/page/registration.pug'
+    }),
+    new HTMLPlugin({
+      filename: "catalog-item.html",
+      template: './src/page/catalog-item.pug'
+    }),
     new MiniCssExtractPlugin({
       filename: 'style.css'
     }),

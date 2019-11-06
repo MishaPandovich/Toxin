@@ -1,0 +1,62 @@
+section.sidebar.catalog__sidebar
+  form.filter-form(action="#" method="post")
+    div.filter-datepicker
+      label.filter-datepicker__label(for="datepicker") Дата пребывания в отеле
+      input.filter-datepicker__input.datepicker-here(type="text" placeholder="19 авг - 23 авг" id="datepicker" readonly)
+    div.filter-visitors
+      label.filter-visitors__label(for="visitors") Гости
+      input.filter-visitors__input(type="text" placeholder="3 гостя, 1 младенец" id="visitors" readonly)
+      div.select-count-visitors__inner
+        //- сюда вставить шаблон
+    div.filter-range-price
+      p.filter-range-price__title Диапозоны цен
+      div.filter-range-price__value
+        span.price-min <span class="min">5000</span>Р -
+        span.price-max <span class="max">1000</span>P
+      div.range-slider
+      p.filter-range-price__text Стоимость за сутки пребывания в номере
+    div.filter-services
+      h4.filter-services__title Услуги
+      input.filter-services__input(type="checkbox" name="smoke" id="smoke")
+      label.filter-services__label(for="smoke") Можно курить
+      input.filter-services__input(type="checkbox" name="pets" id="pets" checked)
+      label.filter-services__label(for="pest") Можно с питомцами
+      input.filter-services__input(type="checkbox" name="visitors" id="visitors" checked)
+      label.filter-services__label(for="visitors") Можно пригласить гостей (до 10 человек)
+    div.filter-availability
+      h4.filter-availability__title Доступность
+      input.filter-availability__input(type="checkbox" id="wide-corridor")
+      label.filter-availability__label(for="wide-corridor") Широкий коридор <span>Ширина коридоров в номере не менее 91 см.</span>
+      input.filter-availability__input(type="checkbox" id="assistant")
+      label.filter-availability__label(for="assistant") Помощник для инвалидов <span>На 1 этаже вас встретит специалист и проводит до номера</span>
+    div.filter-amenities-room
+      label.filter-amenities-room__label(for="amenities") Удобство номера
+      input.filter-amenities-room__input(type="text" name="amenities" id="amenities" placeholder="2 спальни, 2 кровати..." readonly)
+      div.select-amenities-room__inner
+    div.filter-add-amenities-room
+      h4.filter-add-amenities-room__title Дополнительные удобства
+      input.filter-add-amenities-room__input(type="checkbox" name="breakfast" id="breakfast")
+      label.filter-add-amenities-room__label(for="breakfast") Завтрак
+      input.filter-add-amenities-room__input(type="checkbox" name="table" id="table" checked)
+      label.filter-add-amenities-room__label(for="table") Письменный стол
+      input.filter-add-amenities-room__input(type="checkbox" name="baby-chair" id="baby-chair" checked)
+      label.filter-add-amenities-room__label(for="baby-chair") Стул для кормления
+      input.filter-add-amenities-room__input(type="checkbox" name="cot" id="cot" checked)
+      label.filter-add-amenities-room__label(for="cot") Кроватка
+      input.filter-add-amenities-room__input(type="checkbox" name="tv" id="tv")
+      label.filter-add-amenities-room__label(for="tv") Телевизор
+      input.filter-add-amenities-room__input(type="checkbox" name="shampoo" id="shampoo")
+      label.filter-add-amenities-room__label(for="shampoo") Шампунь
+      input.filter-add-amenities-room__input(type="checkbox" name="tv" id="tv")
+      label.filter-add-amenities-room__label(for="tv") Телевизор
+      input.filter-add-amenities-room__input(type="checkbox" name="shampoo" id="shampoo")
+      label.filter-add-amenities-room__label(for="shampoo") Шампунь
+
+  //- шаблон для блока (удобства номера)
+  template(id="select-amenities-room")
+    div.amenities-room__option 
+    span.type-amenities-room Спальни
+    div.block-count-amenities-room
+      span.minus-amenities-room -
+      span.count-amenities-room 2
+      span.plus-amenities-room +

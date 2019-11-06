@@ -1,18 +1,19 @@
-header.header
-  a.logo.header__logo(href="#") 
-    img(alt="Лого <Токсин>" src="../img/logo.png")
-  nav.cite-nav.header__cite-nav
+header.main-header
+  div.main-header__inner.container
+    a.logo.main-header__logo(href="index.html")
+      img(alt="Логотип «Токсин»" src="../img/logo.png")
+  nav.cite-nav.main-header__cite-nav 
     ul.cite-nav__list
       li.cite-nav__item
         a.cite-nav__link(href="#") О нас
-      li.cite-nav__item 
-        a.cite-nav__link.cite-nav__link--select(href="#") Услуги
-      li.cite-nav__item 
+      li.cite-nav__item
+        a.cite-nav__link--select(href="#") Услуги
+      li.cite-nav__item
         a.cite-nav__link(href="#") Вакансии
       li.cite-nav__item
         a.cite-nav__link(href="#") Новости
-      li.cite-nav__item 
-        a.cite-nav__link.cite-nav__link--select(href="#") Соглашения
-  nav.user-nav.header__user-nav
-    a.login.user-nav__login(href="#") Войти
-    a.btn.sign-up.user-nav__sign-up(href="#") Зарегистрироваться
+      li.cite-nav__item
+        a.cite-nav__link--select(href="#") Соглашения
+  div.user-block.main-header__user-block
+    a.login.user-block__login(href="#") Войти
+    a.sign-up.user-block__sign-up(href="#") Зарегистрироваться

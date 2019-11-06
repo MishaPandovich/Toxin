@@ -1,26 +1,25 @@
-main.main
-  div.datepicker.main__datepicker
-    h2.datepicker__title Найдем номера по <br> ваши желания
-    div.datepicker__inner
-      label.datepicker__label.datepicker__label--come Прибытие
-        input.datepicker-here.datepicker__input.datepicker__input--come(id="datepicker" placeholder="ДД.ММ.ГГГГ" readonly)
-      label.datepicker__label.datepicker__label--go Выезд
-        input.datepicker__input.datepicker__input--go(id="departure" placeholder="ДД.ММ.ГГГГ")
-      label.datepicker__label.datepicker__label--count-people Гости
-        input.datepicker__input.datepicker__input--count-people(placeholder="Сколько гостей" readonly)
-        div.datepicker__select.datepicker__select--count-people
-          div.datepicker__select-inner
-          span.select-clear Очистить
-          span.select-close Выполнить
-      button.search-room Поиск номера
-  
-  p.slogan.main__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
+main.main-page
+  section.block-search-room.main-page__block-search-room
+    h2.block-search-room__title Найдем номера под ваши пожелания
+    div.datepicker
+      label.datepicker__label(for="datepicker") Прибытие
+      input.datepicker__input.datepicker-here(id="datepicker" placeholder="ДД.ММ.ГГГГ" readonly)
+      label.datepicker__label(for="go") Выезд
+      input.datepicker__input.datepicker__input--go(id="go" placeholder="ДД.ММ.ГГГГ" readonly)
+      //- добавить кнопку колич посетителе
+    div.select-count-visitors
+      div.select-count-visitors__inner
+      span.select-count-visitors__clear Очистить
+      span.select-count-visitors__close Выполнить
+    button.block-search-room__button Поиск номера
+
+  p.main-page__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
 
   //- шаблон для блока выбора колич. людей вьезжающих в номер 
-  template(id="select-count-people")
-    div.datepicker__option 
-      span.type-people Взрослые
-      div.block-count-people
-        span.minus-people -
-        span.count-people 2
-        span.plus-people +
+  template(id="select-count-visitors")
+    div.select-count-visitors__option
+      span.type-visitor Взрослые
+      div.count-visitors
+        span.minus-visitor -
+        span.count-visitor 2
+        span.plus-visitor +
