@@ -17,26 +17,67 @@
       </nav>
       <div class="user-block main-header__user-block"><a class="login user-block__login" href="#">Войти</a><a class="sign-up user-block__sign-up" href="#">Зарегистрироваться</a></div>
     </header>
-    <main class="main-page">
-      <section class="block-search-room main-page__block-search-room">
-        <h2 class="block-search-room__title">Найдем номера под ваши пожелания</h2>
-        <div class="datepicker">
-          <label class="datepicker__label" for="datepicker">Прибытие</label>
-          <input class="datepicker__input datepicker-here" id="datepicker" placeholder="ДД.ММ.ГГГГ" readonly>
-          <label class="datepicker__label" for="go">Выезд</label>
-          <input class="datepicker__input datepicker__input--go" id="go" placeholder="ДД.ММ.ГГГГ" readonly>
+    <main class="catalog-item">
+      <div class="catalog-item__wrapper-img"><img class="catalog-item__img catalog-item__img--big" src="#" alt="#">
+        <div class="catalog-item__inner-img-small"><img class="catalog-item__img catalog-item__img--small" src="#" alt="#"></div>
+      </div>
+      <div class="columns">
+        <div class="columns__left">
+          <section class="info-about-room">
+            <h2 class="info-about-room__title">Сведения о номере</h2>
+            <ul class="info-about-room__list">
+              <li class="info-about-room__item info-about-room__item--comfort">
+                <h2 class="info-about-room__item-title">Комфорт</h2>
+                <p class="info-about-room__item__text">Шумопоглащающие стены</p>
+              </li>
+              <li class="info-about-room__item info-about-room__item--conveniences">
+                <h2 class="info-about-room__item-title">Удобство</h2>
+                <p class="info-about-room__item__text">Окно в каждой из спален</p>
+              </li>
+              <li class="info-about-room__item info-about-room__item--cosiness">
+                <h2 class="info-about-room__item-title">Уют</h2>
+                <p class="info-about-room__item__text">Номер оснащен камином</p>
+              </li>
+            </ul>
+          </section>
+          <section class="pie"></section>
+          <section class="comments">
+            <ul class="comments__list">
+              <li class="comments__item">
+                <div class="comments__user"><img class="comments__userpic" src="#"><span class="comments__username">Мурад Сарафанов</span><span class="comments__time-writing">5 дней назад</span></div>
+                <div class="comments__content"><span class="comments__content-like">12</span><span class="comments__content-text">Великолепный матрас</span></div>
+              </li>
+            </ul>
+          </section>
+          <section class="rules-room">
+            <h2 class="rules-room__title">Правила</h2>
+            <ul class="rules-room__list">
+              <li class="rules-room__item">Нельзя с питомцами</li>
+              <li class="rules-room__item">Без вечеринок и мероприятий</li>
+              <li class="rules-room__item">Время прибытия - после 13:00, а выезд до 12:00</li>
+            </ul>
+          </section>
+          <section class="cancel-room">
+            <h2 class="cancel-room__title">Отмена</h2>
+            <p class="cancel-room__text">Бесплатная отмена в течении 48 ч.</p>
+          </section>
         </div>
-        <div class="select-count-visitors">
-          <div class="select-count-visitors__inner"></div><span class="select-count-visitors__clear">Очистить</span><span class="select-count-visitors__close">Выполнить</span>
+        <div class="columns__right">
+          <section class="order"><span class="order__number-room">№888 <span>Люкс</span></span><span class="order__price">9990 <span class="valute">P</span><span>В сутки</span></span>
+            <div class="order__datepicker">
+              <label class="order__datepicker-label" for="datepicker">Прибытие </label>
+              <input class="order__datepicker-input datepicker-here" id="datepicker" placeholder="ДД.ММ.ГГГГ" readonly>
+              <label class="order__datepicker-label" for="go">Выезд</label>
+              <input class="order__datepicker-input order__datepicker-input--go" id="go" placeholder="ДД.ММ.ГГГГ" readonly>
+              <label class="order-count-visitors__label" for="count-visitors"></label>
+              <input class="order-count-visitors__input" id="count-visitors" placeholder="3x">
+              <div class="order-count-visitors">
+                <div class="order-count-visitors__inner"></div><span class="order-count-visitors__clear">Очистить</span><span class="order-count-visitors__close">Выполнить</span>
+              </div>
+            </div>
+          </section>
         </div>
-        <button class="block-search-room__button">Поиск номера</button>
-      </section>
-      <p class="main-page__slogan">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
-      <template id="select-count-visitors">
-        <div class="select-count-visitors__option"><span class="type-visitor">Взрослые</span>
-          <div class="count-visitors"><span class="minus-visitor">-</span><span class="count-visitor">2</span><span class="plus-visitor">+</span></div>
-        </div>
-      </template>
+      </div>
     </main>
     <footer class="main-footer">
       <div class="main-footer__inner main-footer__inner--top container">

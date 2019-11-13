@@ -17,24 +17,48 @@
       </nav>
       <div class="user-block main-header__user-block"><a class="login user-block__login" href="#">Войти</a><a class="sign-up user-block__sign-up" href="#">Зарегистрироваться</a></div>
     </header>
-    <main class="main-page">
-      <section class="block-search-room main-page__block-search-room">
-        <h2 class="block-search-room__title">Найдем номера под ваши пожелания</h2>
-        <div class="datepicker">
-          <label class="datepicker__label" for="datepicker">Прибытие</label>
-          <input class="datepicker__input datepicker-here" id="datepicker" placeholder="ДД.ММ.ГГГГ" readonly>
-          <label class="datepicker__label" for="go">Выезд</label>
-          <input class="datepicker__input datepicker__input--go" id="go" placeholder="ДД.ММ.ГГГГ" readonly>
+    <main class="page-login">
+      <section class="model model-login"></section>
+      <template id="model-registration">
+        <div class="model-registration__inner">
+          <h2 class="model-registration__title">Регистрация аккаунта</h2>
+          <form class="form-registration" action="#" method="post">
+            <input class="form-registration__input" type="text" name="name" id="name" placeholder="Имя">
+            <input class="form-registration__input" type="text" name="surname" id="surname" placeholder="Фамилия">
+            <div class="form-registration__checkbox">
+              <input class="form-registration__gender form-registration__gender--man" type="checkbox" name="man" id="man">
+              <label class="form-registration__label" for="man">Мужчина</label>
+              <input class="form-registration__gender form-registration__gender--woman" type="checkbox" name="woman" id="woman">
+              <label class="form-registration__label" for="woman">Женщина</label>
+            </div>
+            <label class="form-registration__label" for="birthday">Дата рождения</label>
+            <input class="form-registration__input" type="text" id="birthday" placeholde="ДД.ММ.ГГГГ">
+            <div class="data-login form-registration__data-login">Данные для входа в сервис
+              <input class="form-registration__input" type="text" id="email" placeholde="email">
+              <input class="form-registration__input" type="text" id="password" placeholde="password">
+            </div>
+            <input class="form-registration__special-offer" type="checkbox" name="special-offer" id="special-offer">
+            <label class="form-registration__label" for="special-offer">Получать спецпредложения</label>
+            <button class="pay form-registration__pay">Перейти к оплате</button>
+            <div class="block-login">
+              <p class="block-login__text">Уже есть аккаунт на Toxin</p>
+              <button class="block-login__button">Войти</button>
+            </div>
+          </form>
         </div>
-        <div class="select-count-visitors">
-          <div class="select-count-visitors__inner"></div><span class="select-count-visitors__clear">Очистить</span><span class="select-count-visitors__close">Выполнить</span>
-        </div>
-        <button class="block-search-room__button">Поиск номера</button>
-      </section>
-      <p class="main-page__slogan">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
-      <template id="select-count-visitors">
-        <div class="select-count-visitors__option"><span class="type-visitor">Взрослые</span>
-          <div class="count-visitors"><span class="minus-visitor">-</span><span class="count-visitor">2</span><span class="plus-visitor">+</span></div>
+      </template>
+      <template id="model-login">
+        <div class="model-login__inner">
+          <h2 class="model-login__title">Войти</h2>
+          <form class="form-login" action="#" method="#">
+            <input class="form-login__input" type="text" id="email" placeholder="Email">
+            <input class="form-login__input" type="text" id="password" placeholder="Пароль">
+            <button class="form-login__button">Войти</button>
+            <div class="block-registration">
+              <p class="block-registration__text">Нет аккаунта на Toxin?</p>
+              <button class="block-registration__button">Создать</button>
+            </div>
+          </form>
         </div>
       </template>
     </main>

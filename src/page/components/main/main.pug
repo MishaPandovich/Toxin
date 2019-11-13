@@ -3,17 +3,18 @@ main.main-page
     h2.block-search-room__title Найдем номера под ваши пожелания
     div.datepicker
       label.datepicker__label(for="datepicker") Прибытие
-      input.datepicker__input.datepicker-here(id="datepicker" placeholder="ДД.ММ.ГГГГ" readonly)
-      label.datepicker__label(for="go") Выезд
-      input.datepicker__input.datepicker__input--go(id="go" placeholder="ДД.ММ.ГГГГ" readonly)
-      //- добавить кнопку колич посетителе
+        input.datepicker__input.datepicker-here(type="text" id="datepicker" placeholder="ДД.ММ.ГГГГ")
+      label.datepicker__label.datepicker__label--go(for="go") Выезд
+        input.datepicker__input.datepicker__input--go(id="go" placeholder="ДД.ММ.ГГГГ" readonly)
+    label.select-count-visitors__label(for="select-count") Гости
+      input.select-count-visitors__input(type="text" id="select-count" placeholder="Сколько гостей")
     div.select-count-visitors
       div.select-count-visitors__inner
       span.select-count-visitors__clear Очистить
       span.select-count-visitors__close Выполнить
-    button.block-search-room__button Поиск номера
+    button.block-search-room__button Подобрать номер
 
-  p.main-page__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
+  p.main-page__slogan Лучшие номера для вашей работы, <br>отдыха и просто вдохновения
 
   //- шаблон для блока выбора колич. людей вьезжающих в номер 
   template(id="select-count-visitors")

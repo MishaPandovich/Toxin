@@ -1,10 +1,40 @@
-.main {
-  width: 100%;
-  height: 66%;
+.main-page {
+  margin-top: 25px;
+  padding: 8%;
+
+  /*width: 100%;
+  height: 66%;*/
+
   background: url('../img/main-background.jpg') no-repeat;
-
-
-  margin-top: 0;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid #ffffff;
+  background-size: cover;
 }
+
+.main-page__slogan {
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  text-align: center;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+@media (min-width: 550px) {
+  .main-page {
+    padding-bottom: 2%;
+  }
+
+  .main-page__slogan {
+    text-align: right;
+  }
+}
+
+/*@media (min-width: 800px) {
+  .main-page {
+    padding-left: 16%;
+    padding-right: 16%; 
+  }
+}*/

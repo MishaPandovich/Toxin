@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <title>Toxin</title>
+  <link href="style.css" rel="stylesheet"></head>
+  <body>
+    <header class="main-header">
+      <div class="main-header__inner container"><a class="logo main-header__logo" href="index.html"><img alt="Логотип «Токсин»" src="images/logo.png"></a></div>
+      <nav class="cite-nav main-header__cite-nav"> 
+        <ul class="cite-nav__list">
+          <li class="cite-nav__item"><a class="cite-nav__link" href="#">О нас</a></li>
+          <li class="cite-nav__item"><a class="cite-nav__link--select" href="#">Услуги</a></li>
+          <li class="cite-nav__item"><a class="cite-nav__link" href="#">Вакансии</a></li>
+          <li class="cite-nav__item"><a class="cite-nav__link" href="#">Новости</a></li>
+          <li class="cite-nav__item"><a class="cite-nav__link--select" href="#">Соглашения</a></li>
+        </ul>
+      </nav>
+      <div class="user-block main-header__user-block"><a class="login user-block__login" href="#">Войти</a><a class="sign-up user-block__sign-up" href="#">Зарегистрироваться</a></div>
+    </header>
+    <main class="catalog-page">
+      <section class="sidebar catalog__sidebar">
+        <form class="filter-form" action="#" method="post">
+          <div class="filter-datepicker">
+            <label class="filter-datepicker__label" for="datepicker">Дата пребывания в отеле</label>
+            <input class="filter-datepicker__input datepicker-here" type="text" placeholder="19 авг - 23 авг" id="datepicker" readonly>
+          </div>
+          <div class="filter-visitors">
+            <label class="filter-visitors__label" for="visitors">Гости</label>
+            <input class="filter-visitors__input" type="text" placeholder="3 гостя, 1 младенец" id="visitors" readonly>
+            <div class="select-count-visitors__inner"></div>
+          </div>
+          <div class="filter-range-price">
+            <p class="filter-range-price__title">Диапозоны цен</p>
+            <div class="filter-range-price__value"><span class="price-min"><span class="min">5000</span>Р -</span><span class="price-max"><span class="max">1000</span>P</span></div>
+            <div class="range-slider"></div>
+            <p class="filter-range-price__text">Стоимость за сутки пребывания в номере</p>
+          </div>
+          <div class="filter-services">
+            <h4 class="filter-services__title">Услуги</h4>
+            <input class="filter-services__input" type="checkbox" name="smoke" id="smoke">
+            <label class="filter-services__label" for="smoke">Можно курить</label>
+            <input class="filter-services__input" type="checkbox" name="pets" id="pets" checked>
+            <label class="filter-services__label" for="pest">Можно с питомцами</label>
+            <input class="filter-services__input" type="checkbox" name="visitors" id="visitors" checked>
+            <label class="filter-services__label" for="visitors">Можно пригласить гостей (до 10 человек)</label>
+          </div>
+          <div class="filter-availability">
+            <h4 class="filter-availability__title">Доступность</h4>
+            <input class="filter-availability__input" type="checkbox" id="wide-corridor">
+            <label class="filter-availability__label" for="wide-corridor">Широкий коридор <span>Ширина коридоров в номере не менее 91 см.</span></label>
+            <input class="filter-availability__input" type="checkbox" id="assistant">
+            <label class="filter-availability__label" for="assistant">Помощник для инвалидов <span>На 1 этаже вас встретит специалист и проводит до номера</span></label>
+          </div>
+          <div class="filter-amenities-room">
+            <label class="filter-amenities-room__label" for="amenities">Удобство номера</label>
+            <input class="filter-amenities-room__input" type="text" name="amenities" id="amenities" placeholder="2 спальни, 2 кровати..." readonly>
+            <div class="select-amenities-room__inner"></div>
+          </div>
+          <div class="filter-add-amenities-room">
+            <h4 class="filter-add-amenities-room__title">Дополнительные удобства</h4>
+            <input class="filter-add-amenities-room__input" type="checkbox" name="breakfast" id="breakfast">
+            <label class="filter-add-amenities-room__label" for="breakfast">Завтрак</label>
+            <input class="filter-add-amenities-room__input" type="checkbox" name="table" id="table" checked>
+            <label class="filter-add-amenities-room__label" for="table">Письменный стол</label>
+            <input class="filter-add-amenities-room__input" type="checkbox" name="baby-chair" id="baby-chair" checked>
+            <label class="filter-add-amenities-room__label" for="baby-chair">Стул для кормления</label>
+            <input class="filter-add-amenities-room__input" type="checkbox" name="cot" id="cot" checked>
+            <label class="filter-add-amenities-room__label" for="cot">Кроватка</label>
+            <input class="filter-add-amenities-room__input" type="checkbox" name="tv" id="tv">
+            <label class="filter-add-amenities-room__label" for="tv">Телевизор</label>
+            <input class="filter-add-amenities-room__input" type="checkbox" name="shampoo" id="shampoo">
+            <label class="filter-add-amenities-room__label" for="shampoo">Шампунь</label>
+            <input class="filter-add-amenities-room__input" type="checkbox" name="tv" id="tv">
+            <label class="filter-add-amenities-room__label" for="tv">Телевизор</label>
+            <input class="filter-add-amenities-room__input" type="checkbox" name="shampoo" id="shampoo">
+            <label class="filter-add-amenities-room__label" for="shampoo">Шампунь</label>
+          </div>
+        </form>
+        <template id="select-amenities-room">
+          <div class="amenities-room__option"> </div><span class="type-amenities-room">Спальни</span>
+          <div class="block-count-amenities-room"><span class="minus-amenities-room">-</span><span class="count-amenities-room">2</span><span class="plus-amenities-room">+</span></div>
+        </template>
+      </section>
+      <section class="catalog">
+        <h2 class="catalog__title">Номера, которые мы для вас подобрали</h2>
+        <ul class="catalog__list">
+          <li class="catalog__item"></li>
+        </ul>
+        <div class="page-number catalog__page-number">
+          <ul class="page-number__list">
+            <li class="page-number__item"><a class="page-number__link page-number__link--active">1</a></li>
+            <li class="page-number__item"><a class="page-number__link page-number__link">2</a></li>
+            <li class="page-number__item"><a class="page-number__link page-number__link">3</a></li>
+            <li class="page-number__item"><a class="page-number__link page-number__link">...</a></li>
+            <li class="page-number__item"><a class="page-number__link page-number__link">15</a></li>
+            <li class="page-number__item"><a class="page-number__link page-number__link--next">Next</a></li>
+          </ul>
+          <p class="page-number__text">1-12 из 100+ вариантов аренды </p>
+        </div>
+      </section>
+      <template id="card">
+        <section class="card-block">
+          <section class="card-gallery">
+            <figure class="card-gallery__content"><a class="card-gallery__link" href="#"><img class="card-gallery__img" src="#" alt="#"></a><a class="card-gallery__link" href="#"><img class="card-gallery__img" src="#" alt="#"></a><a class="card-gallery__link" href="#"><img class="card-gallery__img" src="#" alt="#"></a><a class="card-gallery__link" href="#"><img class="card-gallery__img" src="#" alt="#"></a>
+              <button class="bnt card-gallery__bnt card-gallery__bnt--prev" onclick="minusSlide()">&#10094;</button>
+              <button class="bnt card-gallery__bnt card-gallery__bnt--next" onclick="plusSlide()">&#10095;</button>
+              <div class="card-gallery__dots"><span class="card-gallery__dots-item" onclick="currentSlide(1)"></span><span class="card-gallery__dots-item" onclick="currentSlide(2)"></span><span class="card-gallery__dots-item" onclick="currentSlide(3)"></span></div>
+            </figure>
+            <div class="card-info"><span class="card-info__number-room">№888 <span class="lux">люкс</span></span><span class="card-info__price">9990 <span class="currency">P</span><span>В сутки</span></span>
+              <div class="card-info__inner">
+                <div class="card-info__rating"><span class="star-rating star-rating--one"></span><span class="star-rating star-rating--two"></span><span class="star-rating star-rating--three"></span><span class="star-rating star-rating--four"></span><span class="star-rating star-rating--five"></span></div>
+                <div class="card-info__comments"><a class="card-info__comments-count">145 <span>отзывов</span></a></div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </template>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__inner main-footer__inner--top container">
+        <div class="main-footer__text-wrap"><img class="main-footer__logo" src="#">
+          <p class="main-footer__text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+        </div>
+        <nav class="main-footer__nav">
+          <h4 class="main-footer__title">Навигация</h4>
+          <ul class="main-footer__list">
+            <li class="main-footer__item"><a class="main-footer__link" href="#">О нас</a></li>
+            <li class="main-footer__item"><a class="main-footer__link" href="#">Новости</a></li>
+            <li class="main-footer__item"><a class="main-footer__link" href="#">Служба поддержки</a></li>
+            <li class="main-footer__item"><a class="main-footer__link" href="#">Услуги</a></li>
+          </ul>
+        </nav>
+        <div class="about-us"> 
+          <h4 class="about-us__title">О нас </h4>
+          <ul class="about-us__list"> 
+            <li class="about-us__item"><a class="about-us__link" href="#">О сервисе</a></li>
+            <li class="about-us__item"><a class="about-us__link" href="#">Наша команда</a></li>
+            <li class="about-us__item"><a class="about-us__link" href="#">Вакансии</a></li>
+            <li class="about-us__item"><a class="about-us__link" href="#">Инвесторы</a></li>
+          </ul>
+        </div>
+        <div class="support">
+          <h4 class="support__title">Служба поддержки</h4>
+          <ul class="support__list">
+            <li class="support__item"><a class="support__link" href="#">Соглашения</a></li>
+            <li class="support__item"><a class="support__link" href="#">Сообщества</a></li>
+            <li class="support__item"><a class="support__link" href="#">Связь с нами</a></li>
+          </ul>
+        </div>
+        <div class="subscribe">
+          <h4 class="subscibe__title">Подписка</h4>
+          <p class="subscribe__text">Получайте специальные предложения и новости сервиса</p>
+          <form class="subscribe__email" action="#" method="post">
+            <input class="email" type="text" placeholder="Email">
+          </form>
+        </div>
+      </div>
+      <div class="main-footer__inner main-footer__inner--bottom container">
+        <p class="copyrigth">Copyright © 2018 Toxin отель. Все права зачищены.</p>
+        <div class="social footer__social"><a class="social-btn social-btn--twitter" href="#">twitter</a><a class="social-btn social-btn--facebok" href="#">facebook</a><a class="social-btn social-btn--inst" href="#">instagramm</a></div>
+      </div>
+    </footer>
+  <script type="text/javascript" src="bundle.js"></script></body>
+</html>

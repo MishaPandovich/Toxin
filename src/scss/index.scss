@@ -1,17 +1,10 @@
-/*@font-face {
-  font-family: 'in';
-  src:url('../fonts/Lato-Black.eot');
-}
-
-.pie-wrapper__title {
-  display: block;
-  margin-bottom: 5%;
-  font-family: 'in', sans-serif;
-  border: 1px solid red;
-}*/
-
-/*@import 'components/normalize.scss';
+@import 'components/normalize.scss';
+@import 'components/body.scss';
 @import 'components/header/header.scss';
 @import 'components/main/main.scss';
-@import '../plugins/air-datapicker/css/datepicker.scss';
-@import 'components/main/search-room.scss';*/
+@import 'components/main/search-room.scss';
+@import 'components/catalog/catalog.scss';
+@import 'components/catalog/sidebar.scss';
+@import 'components/footer/footer.scss';
+//@import '../plugins/air-datapicker/css/datepicker.scss';
+// сделать что-то со стилями плагина
